@@ -918,8 +918,8 @@ $essentialtweaks.Add_Click({
     Write-Host "Stopping and disabling WAP Push Service..."
     Stop-Service "dmwappushservice" -WarningAction SilentlyContinue
     Set-Service "dmwappushservice" -StartupType Disabled
-    Write-Host "Enabling F8 boot menu options..."
-    bcdedit /set `{current`} bootmenupolicy Legacy | Out-Null
+    Write-Host "NOT Enabling F8 boot menu options..."
+    #bcdedit /set `{current`} bootmenupolicy Legacy | Out-Null
     Write-Host "Stopping and disabling Home Groups services..."
     Stop-Service "HomeGroupListener" -WarningAction SilentlyContinue
     Set-Service "HomeGroupListener" -StartupType Disabled
